@@ -1,0 +1,249 @@
+
+/*====================================
+        GOOGLE FONT
+=====================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*====================================
+        CSS VARIABLES
+=====================================*/
+
+:root{
+
+    /* Colors */
+
+    --primary:#0F4C81;
+    --primary-dark:#0A3A61;
+    --secondary:#2F80ED;
+    --accent:#00B894;
+
+    --white:#ffffff;
+    --light:#F8FAFC;
+    --gray:#6B7280;
+    --dark:#1F2937;
+
+    --border:#E5E7EB;
+
+    /* Shadows */
+
+    --shadow-sm:0 4px 10px rgba(0,0,0,.08);
+
+    --shadow-md:0 10px 30px rgba(0,0,0,.10);
+
+    --shadow-lg:0 25px 60px rgba(0,0,0,.15);
+
+    /* Radius */
+
+    --radius-sm:10px;
+
+    --radius:18px;
+
+    --radius-lg:28px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}
+
+/*====================================
+        RESET
+=====================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--dark);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+
+/*====================================
+        PART 3
+    PREMIUM ENHANCEMENTS
+=====================================*/
+
+/* Smooth image hover */
+
+img{
+
+    transition:transform .4s ease;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* Floating animation */
+
+.float{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Fade In */
+
+.fade-in{
+
+    animation:fadeIn 1s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* Zoom In */
+
+.zoom-in{
+
+    animation:zoomIn .8s ease forwards;
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* Gradient text */
+
+.gradient-text{
+
+    background:linear-gradient(
+    135deg,
+    var(--secondary),
+    var(--primary));
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    background-clip:text;
+
+}
+
+/* Soft shadow on sections */
+
+section{
+
+    transition:.4s ease;
+
+}
+
+section:hover{
+
+    z-index:2;
+
+}
+
+/* Better focus accessibility */
+
+a:focus,
+button:focus{
+
+    outline:3px solid rgba(47,128,237,.35);
+
+    outline-offset:3px;
+
+}
+
+/* Responsive spacing */
+
+@media(max-width:768px){
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    section{
+
+        padding:55px 0;
+
+    }
+
+}

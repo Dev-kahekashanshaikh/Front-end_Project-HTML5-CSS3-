@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="/css/appointment.css">
+</head>
+<body>
+    <section class="appointment">
+    <div class="container">
+        <h2>Book an Appointment</h2>
+        <p>Schedule your visit with our experienced doctors.</p>
+
+        <form id="appointmentForm">
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="tel" placeholder="Phone Number" required>
+
+            <select required>
+                <option value="">Select Department</option>
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopedics</option>
+                <option>Pediatrics</option>
+            </select>
+
+            <input type="date" required>
+
+            <input type="time" required>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+
+        <p id="msg"></p>
+    </div>
+</section>
+
+<script>
+
+    document.getElementById("appointmentForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    document.getElementById("msg").innerHTML =
+    "✅ Appointment booked successfully! We will contact you soon.";
+
+    this.reset();
+
+});
+</script>
+</body>
+</html>
+
+
+
+
+
